@@ -67,7 +67,6 @@ check_itsself(char field[X_MAX][Y_MAX], int i, int j, char life, char dead)
         }
     }
 
-// printf("neighbors = %d\n", live_around);
 
     if (field[i][j] == dead)
     {
@@ -86,24 +85,7 @@ check_itsself(char field[X_MAX][Y_MAX], int i, int j, char life, char dead)
         {
             buf_field[i][j] = dead;
         }
-
     }
-    // if(field[i][j] == dead && live_around == 3)
-    // {
-    //     field[i][j] = life;
-    // }
-    //     else if (field[i][j] == life && (live_around == 2 || live_around == 3))
-    //     {
-    //         field[i][j] = life;
-    //     }
-    //         else if(field[i][j] == life && (live_around < 2 || live_around > 3))
-    //         {
-    //             field[i][j] = dead;
-    //         }
-    //             else
-    //             {
-    //                 field[i][j] = dead;
-    //             }
 }
 
 void
@@ -173,7 +155,6 @@ main()
 
     for(;;) 
     {   
-        // printf("\033[?47l");
 
         print_field(field);
         next_eteration_field(field, living_cells, dead_cells);
